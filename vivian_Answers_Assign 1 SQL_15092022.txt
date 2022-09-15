@@ -1,0 +1,37 @@
+-- Explore basic queries with these exercises:
+-- 1)The school district superintendent asks for a list of teachers in each school.   
+-- Write a query that lists the schools in alphabetical order along with teachers  
+-- ordered by last name A–Z.
+-- -- CREATE TABLE school_district (
+-- --  	id bigserial,
+-- --  	first_name varchar(30),
+-- -- 	last_name varchar(30),
+-- -- 	schools varchar(50),
+-- -- 	hired_date date,
+-- -- 	salary_$ numeric
+-- -- );
+
+-- INSERT INTO school_district (first_name, last_name, schools, hired_date, salary_$)
+-- VALUES ('Sharon', 'Ebi', 'Testimony Group of Schools', '2010-10-09', 35000),
+-- 		('Gladys', 'James', 'Shalom Group of Schools', '2012-07-01', 50000),
+-- 		('Uzoma', 'Nwachukwu', 'Loctech Institute', '2009-01-05', 35000),
+-- 		('Stephen', 'Nduka', 'Butterfield Academy', '2005-11-15', 45000),
+-- 		('Ngozi', 'Onuoha', 'Uptown Academy', '2013-10-09', 50000),
+-- 		('Linda', 'Sabinus', 'Bright Academy', '2010-01-06', 45000);
+
+-- SELECT * FROM school_district;
+
+-- SELECT schools, first_name, last_name FROM school_district
+-- ORDER BY last_name ASC;
+
+-- 2)Write a query that finds the one teacher whose first name starts with the letter 
+-- S and who earns more than $40,000.
+-- -- SELECT * FROM school_district
+-- -- WHERE salary_$ >= 40000 AND first_name ILIKE 's%';
+
+
+
+-- 3)Rank teachers hired since January 1, 2010, ordered by highest paid to lowest.
+-- -- SELECT * FROM school_district
+-- -- WHERE hired_date >= '2010-01-01'
+-- -- ORDER BY salary_$ DESC;
